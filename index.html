@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Aryan Kumar — Full-Stack Developer</title>
+<meta name="description" content="Portfolio of Aryan Kumar, B.Tech CSE student and full-stack developer building clean, scalable web applications.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f1e7;--bg2:#efe8d9;--card:#fffdf8;--ink:#1b2236;--mute:#5d6477;--gold:#9a7424;--gold2:#b8903a;--line:rgba(154,116,36,.28);--shadow:0 18px 40px -22px rgba(27,34,54,.35);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b1020;--bg2:#10172d;--card:#141c36;--ink:#efe9da;--mute:#a4a9bb;--gold:#d4af5f;--gold2:#e6c57a;--line:rgba(212,175,95,.3);--shadow:0 18px 40px -22px #000}}
+:root[data-theme="dark"]{--bg:#0b1020;--bg2:#10172d;--card:#141c36;--ink:#efe9da;--mute:#a4a9bb;--gold:#d4af5f;--gold2:#e6c57a;--line:rgba(212,175,95,.3);--shadow:0 18px 40px -22px #000}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:calc(76px + env(safe-area-inset-top,0px))}
+body{background:var(--bg);color:var(--ink);font:400 16px/1.7 Inter,system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3,.serif{font-family:"Cormorant Garamond",Georgia,"Times New Roman",serif;font-weight:600;line-height:1.15}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1120px;margin:auto;padding:0 24px}
+section{padding:96px 0}
+.eyebrow{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);font-weight:600}
+h2{font-size:clamp(34px,5vw,48px);margin:10px 0 14px}
+.orn{display:flex;align-items:center;gap:12px;color:var(--gold);margin-bottom:44px}
+.orn:before{content:"";height:1px;width:64px;background:var(--gold)}.orn:after{content:"◆";font-size:9px}
+header{position:fixed;top:0;left:0;right:0;z-index:50;padding-top:env(safe-area-inset-top,0px);background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-family:"Cormorant Garamond",serif;font-size:26px;font-weight:700;letter-spacing:.04em}.logo b{color:var(--gold)}
+.links{display:flex;gap:26px;align-items:center;font-size:13px;letter-spacing:.12em;text-transform:uppercase}
+.links a:hover,.links a.on{color:var(--gold)}
+.ib{background:none;border:1px solid var(--line);color:var(--gold);width:38px;height:38px;border-radius:50%;cursor:pointer;font-size:16px}
+.burger{display:none}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 28px;border-radius:2px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;border:1px solid var(--gold);cursor:pointer;transition:.3s;font-family:inherit}
+.btn.fill{background:linear-gradient(135deg,var(--gold2),var(--gold));color:#fff;border-color:transparent}
+.btn.fill:hover{transform:translateY(-3px);box-shadow:0 14px 28px -12px var(--gold)}
+.btn.ghost{background:transparent;color:var(--gold)}.btn.ghost:hover{background:var(--gold);color:var(--bg)}
+#hero{min-height:100vh;display:flex;align-items:center;padding-top:110px;position:relative;background:radial-gradient(900px 500px at 85% 20%,color-mix(in srgb,var(--gold) 16%,transparent),transparent),var(--bg)}
+.hgrid{display:grid;grid-template-columns:1.25fr .75fr;gap:56px;align-items:center}
+h1{font-size:clamp(48px,8vw,92px);margin:14px 0 8px}h1 em{font-style:italic;color:var(--gold)}
+.role{font-family:"Cormorant Garamond",serif;font-size:clamp(22px,3vw,30px);color:var(--mute);min-height:40px}
+.role span{border-right:2px solid var(--gold);padding-right:4px}
+.lead{max-width:560px;margin:20px 0 34px;color:var(--mute)}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.crest{aspect-ratio:1;max-width:340px;margin:auto;border:1px solid var(--gold);position:relative;display:grid;place-items:center;background:var(--card);box-shadow:var(--shadow);border-radius:50% 50% 4px 4px/38% 38% 4px 4px}
+.crest:before{content:"";position:absolute;inset:12px;border:1px solid var(--line);border-radius:inherit}
+.crest .m{font-family:"Cormorant Garamond",serif;font-size:120px;font-weight:700;color:var(--gold);line-height:1}
+.crest small{position:absolute;bottom:34px;letter-spacing:.3em;font-size:10px;text-transform:uppercase;color:var(--mute)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:70px}
+.stats div{background:var(--card);padding:22px;text-align:center}
+.stats b{display:block;font:600 34px "Cormorant Garamond",serif;color:var(--gold)}.stats span{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+.alt{background:var(--bg2)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.two p{color:var(--mute);margin-bottom:16px}
+.facts{list-style:none;padding:0;display:grid;gap:14px}
+.facts li{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--line);font-size:15px}.facts li span{color:var(--mute)}
+.sk{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
+.card{background:var(--card);border:1px solid var(--line);padding:30px;box-shadow:var(--shadow);transition:.35s;position:relative}
+.card:hover{transform:translateY(-6px);border-color:var(--gold)}
+.card h3{font-size:25px;margin-bottom:14px}.card h3 i{font-style:normal;color:var(--gold);margin-right:8px}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tags span{font-size:12px;padding:5px 12px;border:1px solid var(--line);color:var(--ink);letter-spacing:.04em;background:color-mix(in srgb,var(--gold) 7%,transparent)}
+.proj{display:grid;gap:28px}
+.pj{display:grid;grid-template-columns:90px 1fr;gap:28px;padding:38px}
+.num{font:600 64px/1 "Cormorant Garamond",serif;color:var(--gold);opacity:.55}
+.pj h3{font-size:32px}.pj .meta{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin:6px 0 14px}
+.pj p{color:var(--mute);margin-bottom:12px}
+.pj ul{padding-left:18px;color:var(--mute);margin:10px 0 18px}.pj li{margin-bottom:4px}
+.pj .tags{margin-bottom:22px}
+.tl{position:relative;padding-left:34px;border-left:1px solid var(--gold)}
+.ev{position:relative;padding-bottom:36px}.ev:before{content:"";position:absolute;left:-41px;top:7px;width:13px;height:13px;background:var(--bg);border:2px solid var(--gold);transform:rotate(45deg)}
+.alt .ev:before{background:var(--bg2)}
+.ev .yr{font-size:12px;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;font-weight:600}
+.ev h3{font-size:26px;margin:4px 0}.ev p{color:var(--mute);font-size:15px}
+.score{display:inline-block;margin-top:8px;padding:3px 12px;border:1px solid var(--gold);color:var(--gold);font-size:13px;font-weight:500}
+.quote{text-align:center;max-width:780px;margin:auto}
+.quote blockquote{font:italic 500 clamp(24px,3.4vw,36px)/1.4 "Cormorant Garamond",serif}
+.quote blockquote:before{content:"“";display:block;font-size:80px;line-height:.6;color:var(--gold)}
+.quote p{margin-top:22px;color:var(--mute)}
+.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.ct{list-style:none;padding:0;display:grid;gap:14px}
+.ct a{display:flex;gap:16px;align-items:center;padding:16px 20px;border:1px solid var(--line);background:var(--card);transition:.3s}
+.ct a:hover{border-color:var(--gold);transform:translateX(6px)}.ct small{display:block;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.ct i{font-style:normal;font-size:20px;width:26px;text-align:center}
+.ct span{word-break:break-word}
+footer{padding:36px 0;text-align:center;border-top:1px solid var(--line);color:var(--mute);font-size:13px;background:var(--bg2)}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s,transform .8s}.rv.in{opacity:1;transform:none}
+#toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translate(-50%,30px);background:var(--ink);color:var(--bg);padding:12px 22px;font-size:14px;opacity:0;transition:.4s;z-index:90;pointer-events:none;max-width:90%;text-align:center}
+#toast.s{opacity:1;transform:translate(-50%,0)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}.rv{opacity:1;transform:none}}
+@media(max-width:860px){
+section{padding:70px 0}.hgrid,.two,.cgrid{grid-template-columns:1fr;gap:36px}.crest{max-width:230px;order:-1}.crest .m{font-size:80px}
+.stats{grid-template-columns:1fr 1fr}.pj{grid-template-columns:1fr;padding:28px}.num{font-size:44px}
+.burger{display:block}.links{position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--bg);padding:22px;gap:18px;border-bottom:1px solid var(--line);display:none}.links.o{display:flex}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><nav>
+<a href="#hero" class="logo">Aryan<b>.</b>Kumar</a>
+<div class="links" id="lk">
+<a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#academics">Academics</a><a href="#contact">Contact</a>
+<button class="ib" id="th" aria-label="Toggle theme">☾</button></div>
+<button class="ib burger" id="bg" aria-label="Menu">☰</button>
+</nav></div></header>
+
+<main>
+<section id="hero"><div class="wrap">
+<div class="hgrid">
+<div>
+<div class="eyebrow">Portfolio · Kolkata, India</div>
+<h1>Aryan <em>Kumar</em></h1>
+<div class="role"><span id="ty"></span></div>
+<p class="lead">Final-year Computer Science engineer who builds responsive, reliable web applications end to end, from refined interfaces to SQL-backed Node.js services, with a strong foundation in data structures and algorithms.</p>
+<div class="cta">
+<button class="btn fill" id="dl1">⬇ Download Resume</button>
+<a class="btn ghost" href="#projects">View Projects</a>
+</div>
+</div>
+<div class="crest"><div class="m">AK</div><small>Full-Stack · DSA</small></div>
+</div>
+<div class="stats rv">
+<div><b>2</b><span>Projects shipped</span></div>
+<div><b>2027</b><span>B.Tech graduation</span></div>
+<div><b>Full-Stack</b><span>Front + back end</span></div>
+<div><b>DSA</b><span>Problem solving</span></div>
+</div>
+</div></section>
+
+<section id="about" class="alt"><div class="wrap">
+<div class="eyebrow">Introduction</div><h2>About Me</h2><div class="orn"></div>
+<div class="two">
+<div class="rv">
+<p>I am a Computer Science &amp; Engineering student at Budge Budge Institute of Technology, passionate about turning real-world problems into clean, scalable software. I work across the stack: crafting responsive interfaces with HTML5, CSS3, JavaScript and React, and building data-driven backends with Node.js and SQL.</p>
+<p>I care about the fundamentals that large engineering teams rely on: readable code, sound data structures, version control discipline, and interfaces that feel effortless on every screen size.</p>
+<p>I am seeking a Software Engineer opportunity at a product-driven technology company where I can contribute from day one, learn from experienced engineers, and grow into an engineer who ships impact at scale.</p>
+</div>
+<ul class="facts rv">
+<li>Name<span>Aryan Kumar</span></li>
+<li>Role<span>Frontend &amp; Backend Developer</span></li>
+<li>Degree<span>B.Tech, Computer Science &amp; Engineering</span></li>
+<li>Batch<span>2023 – 2027 (4th year)</span></li>
+<li>Languages<span>English, Hindi</span></li>
+<li>Location<span>Kolkata, West Bengal – 700137</span></li>
+</ul>
+</div></div></section>
+
+<section id="skills"><div class="wrap">
+<div class="eyebrow">Expertise</div><h2>Technical Skills</h2><div class="orn"></div>
+<div class="sk">
+<div class="card rv"><h3><i>❖</i>Languages</h3><div class="tags"><span>JavaScript</span><span>C</span><span>C++</span><span>Python (Basic)</span><span>Java (Basic)</span><span>SQL</span></div></div>
+<div class="card rv"><h3><i>❖</i>Frontend</h3><div class="tags"><span>HTML5</span><span>CSS3</span><span>React.js</span><span>Responsive UI Design</span></div></div>
+<div class="card rv"><h3><i>❖</i>Backend &amp; Data</h3><div class="tags"><span>Node.js</span><span>SQL Databases</span><span>REST-style APIs</span></div></div>
+<div class="card rv"><h3><i>❖</i>Computer Science</h3><div class="tags"><span>Data Structures &amp; Algorithms</span><span>Operating Systems</span><span>Problem Solving</span></div></div>
+<div class="card rv"><h3><i>❖</i>Tools &amp; Workflow</h3><div class="tags"><span>Git</span><span>GitHub</span><span>VS Code</span><span>Render (Deployment)</span></div></div>
+<div class="card rv"><h3><i>❖</i>Platforms</h3><div class="tags"><span>Windows</span><span>Linux</span></div></div>
+</div></div></section>
+
+<section id="projects" class="alt"><div class="wrap">
+<div class="eyebrow">Selected Work</div><h2>Academic Projects</h2><div class="orn"></div>
+<div class="proj">
+<article class="card pj rv"><div class="num">01</div><div>
+<h3>Leave Management System</h3><div class="meta">Full-Stack · May – June 2026</div>
+<p>A web platform for managing employee leave requests, approvals and records through an intuitive, responsive interface.</p>
+<ul>
+<li>Node.js server (<code>server.js</code>) with a dedicated database module and environment-based configuration.</li>
+<li>Relational data model defined in a SQL schema (<code>schema.sql</code>) for requests, approvals and records.</li>
+<li>Browser interface served from a <code>public</code> directory; deployed live on Render.</li>
+</ul>
+<div class="tags"><span>Node.js</span><span>JavaScript</span><span>SQL</span><span>HTML5</span><span>CSS3</span><span>Git &amp; GitHub</span><span>Render</span></div>
+<div class="cta"><a class="btn fill" href="https://leave-management-lssu.onrender.com/" target="_blank" rel="noopener">Live Demo ↗</a><a class="btn ghost" href="https://github.com/aryann1319/leave-management" target="_blank" rel="noopener">GitHub ↗</a></div>
+</div></article>
+<article class="card pj rv"><div class="num">02</div><div>
+<h3>Chetna</h3><div class="meta">Frontend Lead · October 2025</div>
+<p>An AI-powered mental health assessment and support platform that enables early detection of psychosocial risks among students, while ensuring privacy and accessibility.</p>
+<ul>
+<li><b>My contribution:</b> designed and built the complete frontend of the platform.</li>
+<li>Focused on a calm, accessible interface suited to a sensitive, student-facing use case.</li>
+</ul>
+<div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>GitHub</span></div>
+<div class="cta"><a class="btn fill" href="https://github.com/aryann1319/Chetna" target="_blank" rel="noopener">GitHub ↗</a></div>
+</div></article>
+</div></div></section>
+
+<section id="academics"><div class="wrap">
+<div class="eyebrow">Education</div><h2>Academic Track</h2><div class="orn"></div>
+<div class="tl">
+<div class="ev rv"><div class="yr">2023 – 2027 · Pursuing</div><h3>B.Tech in Computer Science &amp; Engineering</h3><p>Budge Budge Institute of Technology, Kolkata · Affiliated to MAKAUT · Currently in 4th year</p><span class="score">CGPA 6.9 (ongoing)</span></div>
+<div class="ev rv"><div class="yr">2019 – 2021</div><h3>Intermediate (Class XII)</h3><p>Central Board of Secondary Education (CBSE) · Sarswati Shishu Mandir, Dhanbad</p><span class="score">72.4%</span></div>
+<div class="ev rv"><div class="yr">2019</div><h3>Matriculation (Class X)</h3><p>Central Board of Secondary Education (CBSE) · DAV Public School, Dhanbad</p><span class="score">66%</span></div>
+</div>
+<p class="rv" style="margin-top:6px;color:var(--mute)"><b style="color:var(--gold)">Co-curricular:</b> Participant, Inter-College Hackathon 2025 · Seminar participant, Budge Budge Institute of Technology</p>
+</div></section>
+
+<section class="alt"><div class="wrap quote rv">
+<div class="eyebrow">A Note to Every Visitor</div>
+<blockquote>Thank you for visiting. Great software is built with patience, curiosity and care, and I would be glad to build something meaningful with you.</blockquote>
+<p>Whether you are a recruiter, an engineer or a fellow learner, I welcome your feedback and conversation.</p>
+</div></section>
+
+<section id="contact"><div class="wrap">
+<div class="eyebrow">Get in Touch</div><h2>Let’s Connect</h2><div class="orn"></div>
+<div class="cgrid">
+<div class="rv"><p style="color:var(--mute);margin-bottom:26px">I am open to internships, entry-level software engineering roles and collaborations. Write to me and I will respond promptly.</p>
+<button class="btn fill" id="dl2">⬇ Download Resume</button></div>
+<ul class="ct rv">
+<li><a href="mailto:aryandav7@gmail.com"><i>✉</i><div><small>Email</small><span>aryandav7@gmail.com</span></div></a></li>
+<li><a href="tel:+917061782577"><i>✆</i><div><small>Phone</small><span>+91 70617 82577</span></div></a></li>
+<li><a href="https://www.linkedin.com/in/aryan-kumar-5a5a97437" target="_blank" rel="noopener"><i>in</i><div><small>LinkedIn</small><span>aryan-kumar</span></div></a></li>
+<li><a href="https://github.com/aryann1319" target="_blank" rel="noopener"><i>⌥</i><div><small>GitHub</small><span>github.com/aryann1319</span></div></a></li>
+<li><a href="https://leetcode.com/u/aryan1913/" target="_blank" rel="noopener"><i>⟨⟩</i><div><small>LeetCode</small><span>leetcode.com/u/aryan1913</span></div></a></li>
+<li><a href="#contact"><i>⌖</i><div><small>Address</small><span>Kolkata, West Bengal – 700137, India</span></div></a></li>
+</ul>
+</div></div></section>
+</main>
+<footer>© 2026 Aryan Kumar · Crafted with care in Kolkata</footer>
+<div id="toast"></div>
+
+<script>
+const $=s=>document.querySelector(s),root=document.documentElement;
+function toast(m){const t=$("#toast");t.textContent=m;t.classList.add("s");setTimeout(()=>t.classList.remove("s"),3600)}
+/* theme */
+try{const s=localStorage.getItem("theme");if(s)root.dataset.theme=s}catch(e){}
+function icon(){const d=root.dataset.theme?root.dataset.theme==="dark":matchMedia("(prefers-color-scheme:dark)").matches;$("#th").textContent=d?"☀":"☾"}
+icon();
+$("#th").onclick=()=>{const d=root.dataset.theme?root.dataset.theme==="dark":matchMedia("(prefers-color-scheme:dark)").matches;root.dataset.theme=d?"light":"dark";try{localStorage.setItem("theme",root.dataset.theme)}catch(e){}icon()};
+/* menu */
+$("#bg").onclick=()=>$("#lk").classList.toggle("o");
+document.querySelectorAll("#lk a").forEach(a=>a.onclick=()=>$("#lk").classList.remove("o"));
+/* reveal */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll(".rv").forEach(e=>io.observe(e));
+/* active link */
+const so=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)document.querySelectorAll("#lk a").forEach(a=>a.classList.toggle("on",a.getAttribute("href")==="#"+e.target.id))}),{rootMargin:"-45% 0px -50% 0px"});
+document.querySelectorAll("section[id]").forEach(s=>so.observe(s));
+/* typing */
+const R=["Full-Stack Developer","Frontend & Backend Engineer","B.Tech CSE · 2027","DSA & Problem Solver"],ty=$("#ty");
+if(matchMedia("(prefers-reduced-motion:reduce)").matches){ty.textContent=R[0]}else{let i=0,j=0,del=false;(function tick(){const w=R[i];ty.textContent=w.slice(0,j);if(!del&&j===w.length){del=true;return setTimeout(tick,1500)}if(del&&j===0){del=false;i=(i+1)%R.length}j+=del?-1:1;setTimeout(tick,del?35:70)})()}
+/* resume: keep Aryan_Kumar_Resume.pdf in the same folder as index.html */
+function getResume(){
+  const a=document.createElement("a");
+  a.href="Aryan - Resume.pdf";a.download="Aryan - Resume.pdf";
+  document.body.appendChild(a);a.click();a.remove();
+}
+$("#dl1").onclick=getResume;$("#dl2").onclick=getResume;
+</script>
+</body>
+</html>
